@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>タイトルタブ</title>
+</head>
+
+<body style="background-color: gray;">
+    <div id='org_div1'></div>
+    <input type="button" id="btn" value="ボタン" onclick="btnClick();" />
+    <script>
+        function reqListener() {
+            var elem = document.createElement('div');
+            elem.innerHTML = this.responseText;
+            my_div = document.getElementById("org_div1");
+            document.body.insertBefore(elem,my_div);
+            console.log(this.responseText)
+        }
+        function btnClick() {
+            var url = "test.php?a=1&b=3";
+            const request = new XMLHttpRequest();
+            request.addEventListener("load", reqListener);
+            request.open("GET", url, true);
+            request.send("");
+        }
+    </script>
+</body>
+
+</html>
