@@ -3,7 +3,7 @@
 session_start();
  
 // 接続
-$mysqli = new mysqli('localhost', 'root', 'root', 'User authentication');
+$mysqli = new mysqli('localhost', 'admin', 'password', 'User authentication');
  
 //接続状況の確認
 if (mysqli_connect_errno()) {

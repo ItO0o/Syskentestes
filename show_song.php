@@ -19,7 +19,7 @@ if ($_SESSION['authenticated']) {
 }
 
 // 接続
-$mysqli = new mysqli('localhost', 'root', 'root', 'music_data');
+$mysqli = new mysqli('localhost', 'admin', 'password', 'music_data');
 
 //itoo先輩に渡す時に使うよう
 // $mysqli = new mysqli('localhost', 'admin', 'password', 'music_data');

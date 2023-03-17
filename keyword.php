@@ -21,7 +21,7 @@
 	}
  
 // 接続
-$mysqli = new mysqli('localhost', 'root', 'root', 'music_data');
+$mysqli = new mysqli('localhost', 'admin', 'password', 'music_data');
  
 //接続状況の確認
 if (mysqli_connect_errno()) {
